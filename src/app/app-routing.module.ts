@@ -6,14 +6,14 @@ import { GiveComponent } from 'src/give/give/give.component';
 import { HomeComponent } from 'src/home/home.component';
 
 const routes: Routes = [
-  {path: 'contact-us', component: ContactUsComponent},
-  {path: 'crezco-story', component: CrezcoStoryComponent},
-  {path: 'give', component: GiveComponent},
-  {path: '', component: HomeComponent}
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'crezco-story', component: CrezcoStoryComponent },
+  { path: 'give', component: GiveComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

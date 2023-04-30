@@ -12,19 +12,17 @@ import { CrezcoStoryModule } from 'src/crezco-story/crezco-story.module';
 import { ContactUsModule } from 'src/contact-us/contact-us.module';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        ContactUsModule,
-        CrezcoStoryModule,
-        GiveModule,
-        HomeModule,
-        SharedModule,
-        BrowserModule,
-        AppRoutingModule,
-    ]
+  declarations: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent],
+  imports: [
+    ContactUsModule,
+    CrezcoStoryModule,
+    GiveModule,
+    HomeModule,
+    SharedModule,
+    BrowserModule,
+    AppRoutingModule,
+  ],
 })
-export class AppModule { }
+export class AppModule {}

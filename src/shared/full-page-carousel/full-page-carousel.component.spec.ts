@@ -8,9 +8,8 @@ describe('FullPageCarouselComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FullPageCarouselComponent ]
-    })
-    .compileComponents();
+      declarations: [FullPageCarouselComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FullPageCarouselComponent);
     component = fixture.componentInstance;

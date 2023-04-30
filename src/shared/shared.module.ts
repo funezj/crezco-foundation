@@ -15,15 +15,12 @@ import { RouterModule } from '@angular/router';
     MultipleItemsSliderComponent,
     FooterComponent,
   ],
-  imports: [
-    RouterModule,
-    CommonModule
-  ],
+  imports: [RouterModule, CommonModule],
   exports: [
     MultipleItemsSliderComponent,
     FullPageCarouselComponent,
     FooterComponent,
-    NavBarComponent
-  ]
+    NavBarComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

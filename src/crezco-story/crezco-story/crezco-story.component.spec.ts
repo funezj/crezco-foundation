@@ -8,9 +8,8 @@ describe('CrezcoStoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CrezcoStoryComponent ]
-    })
-    .compileComponents();
+      declarations: [CrezcoStoryComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CrezcoStoryComponent);
     component = fixture.componentInstance;
