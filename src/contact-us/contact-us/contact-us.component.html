@@ -9,41 +9,66 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 card p-5">
-      <h2 class="display-2 text-center p-3">We've love to connect with you!</h2>
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
+    <div class="col-12 card p-5 d-flex flex-row align-items-center">
+      <div class="col-6">
+        <h5 class="text-left py-3">We'd love to connect with you!</h5>
+        <form>
+          <div class="mb-3">
+            <label for="inputName" class="form-label"></label>
+            <input
+              type="text"
+              class="form-control py-2"
+              id="inputName"
+              aria-describedby="emailHelp"
+              placeholder="Enter your Name"
+            />
+            <label for="inputEmail" class="form-label"></label>
+            <input
+              type="email"
+              class="form-control py-2"
+              id="inputEmail"
+              aria-describedby="emailHelp"
+              placeholder="Enter a valid email address"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
+          <div class="mb-3">
+            <label for="messageTextArea" class="form-label"></label>
+            <textarea
+              class="form-control py-2"
+              name=""
+              id="messageTextArea"
+              placeholder="Enter your message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="checContact" />
+            <label class="form-check-label" for="checContact"
+              >Check me out</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-6 d-flex flex-column align-items-center">
+        <h2 class="display-5 text-center p-3">Contact Us</h2>
+        <p>
+          Our mailing address is:<br />
+          152A Charlotte Street,<br />
+          Peterborough ON<br />
+          Phone: 705-742-3221
+        </p>
+        <div class="icons-contact d-flex align-items-center gap-4 mt-3">
+          <i class="fa-brands fa-facebook-f fa-xl"></i>
+          <i class="fa-brands fa-twitter fa-xl"></i>
+          <i class="fa-brands fa-instagram fa-xl"></i>
+          <i class="fa-brands fa-google-plus-g fa-xl"></i>
         </div>
-        <div class="mb-3">
-          <label for="messageTextArea" class="form-label">Message</label>
-          <textarea
-            class="form-control"
-            name=""
-            id="messageTextArea"
-            cols="30"
-            rows="10"
-          ></textarea>
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>
