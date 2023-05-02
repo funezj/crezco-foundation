@@ -14,47 +14,85 @@
     >
       <div class="col-12 col-lg-6">
         <h5 class="text-left py-3">We'd love to connect with you!</h5>
-        <form>
+        <form [formGroup]="contactForm" (Submit)="onSubmited()">
           <div class="mb-3">
-            <label for="inputName" class="form-label"></label>
+            <label for="userName" class="form-label"></label>
             <input
               type="text"
               class="form-control py-2"
-              id="inputName"
-              aria-describedby="emailHelp"
+              id="userName"
+              aria-describedby="yourName"
               placeholder="Enter your Name"
+              formControlName="inputName"
+              required
             />
-            <label for="inputEmail" class="form-label"></label>
+            <label for="userEmail" class="form-label"></label>
             <input
               type="email"
               class="form-control py-2"
-              id="inputEmail"
+              id="userEmail"
               aria-describedby="emailHelp"
               placeholder="Enter a valid email address"
+              formControlName="inputEmail"
+              required
             />
             <div id="emailHelp" class="form-text">
               We'll never share your email with anyone else.
             </div>
           </div>
           <div class="mb-3">
+            <label for="amount" class="form-label"></label>
+            <input
+              type="number"
+              name="mount"
+              id="amount"
+              formControlName="amount"
+              placeholder="Enter a mount"
+              aria-describedby="Amount number"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3">
             <label for="messageTextArea" class="form-label"></label>
             <textarea
               class="form-control py-2"
-              name=""
+              name="messageArea"
               id="messageTextArea"
               placeholder="Enter your message"
               cols="30"
               rows="10"
+              formControlName="message"
+              required
             ></textarea>
           </div>
           <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="checContact" />
-            <label class="form-check-label" for="checContact"
-              >Check me out</label
+            <label class="form-check-label" for="checkContact"
+              >Donate with PayPal</label
             >
+            <i
+              class="ms-2 fa-brands fa-cc-paypal fa-xl"
+              style="color: #0079c1"
+            ></i>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="checkContact"
+              formControlName="checkForm"
+              required
+            />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!contactForm.valid"
+          >
+            Submit
+          </button>
         </form>
+        <hr />
+        <p>Form Value: {{ contactForm.value | json }}</p>
+        <p>Form Status: {{ contactForm.status }}</p>
       </div>
       <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
         <h2 class="display-5 text-center p-3">Contact Us</h2>
